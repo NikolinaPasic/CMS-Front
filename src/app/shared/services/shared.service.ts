@@ -3,14 +3,18 @@ import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { User } from '../user.model';
 
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
 
+
   readonly APIUrl="https://localhost:44302/api";
-  constructor(private http:HttpClient) {
-  }
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) { }
 
   getUserList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/user')
@@ -38,5 +42,8 @@ export class SharedService {
               console.log(error);
             }
           );
+          }
+  viewUser(id:number):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl + '/user' + id)
   }
 }
