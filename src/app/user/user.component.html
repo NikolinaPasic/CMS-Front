@@ -3,9 +3,10 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Username</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody *ngFor="let item of users">
@@ -14,8 +15,11 @@
       <td>{{item.firstName}}</td>
       <td>{{item.lastName}}</td>
       <td>{{item.userName}}</td>
-      <td>{{item.password}}</td>
       <td>{{item.roleId}}</td>
+      <td>
+
+        <button  (click)="getUser(item.userId)">View user</button>
+      </td>
     </tr>
   </tbody>
 </table>
