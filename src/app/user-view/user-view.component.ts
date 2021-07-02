@@ -9,15 +9,10 @@ import { SharedService } from '../shared/services/shared.service';
 })
 export class UserViewComponent implements OnInit {
 
+  public currentUser: any;
+  public id:any;
   ngOnInit(): void {
+    
   }
 
-  // users:Array<any>=[];
-  // constructor(private sharedservice: SharedService, private http: HttpClient) {
-  //   this.sharedservice.viewUserList()
-  //   .subscribe(list=>{
-  //     console.log(list);
-  //     this.users=list;
-  //   })
-  //  }
 }

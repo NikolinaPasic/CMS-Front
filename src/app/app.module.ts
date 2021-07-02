@@ -6,7 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
-import { UserViewComponent } from './user-view/user-view.component'
+import { UserViewComponent } from './user-view/user-view.component';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CardsModule } from 'angular-bootstrap-md';
+import { AvatarModule } from 'ngx-avatar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +22,12 @@ import { UserViewComponent } from './user-view/user-view.component'
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    FlexLayoutModule,
+    CardsModule,
+    AvatarModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
