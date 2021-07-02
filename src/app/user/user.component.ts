@@ -10,14 +10,15 @@ export class UserComponent implements OnInit {
 
   users:Array<any>=[];
   constructor(private sharedservice: SharedService, private http: HttpClient) {
-    this.sharedservice.getUserList()
+    
+   }
+
+  ngOnInit(): void {
+     this.sharedservice.getUserList()
     .subscribe(list=>{
       this.users=list;
       console.log(list);
     })
-   }
-
-  ngOnInit(): void {
   }
 
 
