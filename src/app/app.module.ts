@@ -12,10 +12,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardsModule } from 'angular-bootstrap-md';
 import { AvatarModule } from 'ngx-avatar';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { UserAddComponent } from './user-add/user-add.component'
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
+    UserAddComponent,
     UserViewComponent
   ],
   imports: [
@@ -27,7 +30,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FlexLayoutModule,
     CardsModule,
     AvatarModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

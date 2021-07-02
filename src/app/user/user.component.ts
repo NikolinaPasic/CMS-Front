@@ -12,21 +12,22 @@ import { ThrowStmt } from '@angular/compiler';
 export class UserComponent implements OnInit {
 
   users:Array<any>=[];
-  constructor(private sharedservice: SharedService,
-    private http: HttpClient,
+  constructor(private sharedservice: SharedService, private http: HttpClient,
     private router: Router) {
+    
+   }
+
+  ngOnInit(): void {  
     this.sharedservice.getUserList()
     .subscribe(list=>{
       console.log(list);
       this.users=list;
     })
-   }
-
-  ngOnInit(): void {
-
   }
-
   getUser(id:number){
     this.router.navigate(['/user/'+id]);
   }
+  
+
+  
 }

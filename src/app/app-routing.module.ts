@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import{Routes,RouterModule} from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { AppComponent } from './app.component';
+import { UserAddComponent } from './user-add/user-add.component';
 import { UserViewComponent } from './user-view/user-view.component';
 
 
 const routes: Routes =[
   {path: 'user', component: UserComponent},
+  {path: 'user-add', component: UserAddComponent},
   {path: 'user/:id',component:UserViewComponent}
 ];
 
